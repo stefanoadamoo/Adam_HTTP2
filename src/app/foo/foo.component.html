@@ -1,0 +1,29 @@
+<h2>Basic Request</h2>
+<button type="button" (click)="makeRequest()">Make Request</button>
+<div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>
+
+<hr>
+
+<button type="button" (click)="makeCompactPost()">Make Post</button>
+
+<hr>
+
+<button type="button" (click)="makeTypedRequest()">Make typed request</button>
+
+<!--Uso un ciclo for per scandire tutta la lista di dischi-->
+<div *ngFor="let record of fooData">
+    <h3>{{record.title}}</h3>
+    <h4>{{record.artist}}</h4>
+    <table>
+        <tr>
+            <td>Year</td>
+            <td><i>{{record.year}}</i></td>
+        </tr>
+        <tr>
+            <td>Company</td>
+            <td><i>{{record.company}}</i></td>
+        </tr>
+    </table>
+    <hr>
+</div>
