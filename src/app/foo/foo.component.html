@@ -1,20 +1,16 @@
-<h2>Basic Request</h2>
-<button type="button" (click)="makeRequest()">Make Request</button>
+<h2>Chiamate HTTP</h2>
+
+<button type="button" (click)="makeRequest()">GET</button>
 <div *ngIf="loading">loading...</div>
-<pre>{{data | json}}</pre>
+<pre id="res-get" style="display:none">{{dataGet | json}}</pre>
 
 <hr>
 
-<button type="button" (click)="makeCompactPost()">Make Post</button>
-
-<hr>
-
-<button type="button" (click)="makeTypedRequest()">Make typed request</button>
+<button type="button" (click)="makeTypedRequest()">GET tipizzata</button>
 
 <!--Uso un ciclo for per scandire tutta la lista di dischi-->
 <div *ngFor="let record of fooData">
-    <h3>{{record.title}}</h3>
-    <h4>{{record.artist}}</h4>
+    <h4>{{record.title}} - <i>{{record.artist}}</i></h4>
     <table>
         <tr>
             <td>Year</td>
@@ -27,3 +23,8 @@
     </table>
     <hr>
 </div>
+
+<hr>
+
+<button type="button" (click)="makeCompactPost()">POST</button>
+<pre id="res-post" style="display:none">{{dataPost | json}}</pre>
