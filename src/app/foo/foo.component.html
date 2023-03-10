@@ -10,15 +10,15 @@
 
 <!--Uso un ciclo for per scandire tutta la lista di dischi-->
 <div *ngFor="let record of fooData">
-    <h4>{{record.title}} - <i>{{record.artist}}</i></h4>
+    <h4>{{record.title}} - <i>{{record.like}}</i></h4>
     <table>
         <tr>
-            <td>Year</td>
-            <td><i>{{record.year}}</i></td>
+            <td>Titolo</td>
+            <td><i>{{record.title}}</i></td>
         </tr>
         <tr>
-            <td>Company</td>
-            <td><i>{{record.company}}</i></td>
+            <td>Like</td>
+            <td><i>{{record.like}}</i></td>
         </tr>
     </table>
     <hr>
